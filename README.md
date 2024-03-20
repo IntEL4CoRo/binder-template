@@ -4,7 +4,7 @@
 
 This is a template repo for running robotics research Jupyter Notebooks on Binderhub.
 
-Tutorials can be found here: https://vib.ai.uni-bremen.de/page/softwaretools/cloud-based-infrastructure#zero-to-binder
+Tutorials can be found here: https://vib.ai.uni-bremen.de/page/softwaretools/cloud-based-robotics-platform#zero-to-binder
 
 ## Development
 
