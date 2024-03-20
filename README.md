@@ -4,13 +4,13 @@
 
 This is a template repo for running robotics research Jupyter Notebooks on Binderhub.
 
-Step-by step tutorials can be found here: https://vib.ai.uni-bremen.de/page/softwaretools/cloud-based-infrastructure#step-by-step-tutorial
+Tutorials can be found here: https://vib.ai.uni-bremen.de/page/softwaretools/cloud-based-infrastructure#zero-to-binder
 
 ## Development
 
 ### Run and build docker image Locally (Under repo directory)
 
-- To make the current directory writable inside the jupyterlab:
+- To make the current directory writable inside the container:
 
   ```bash
   chmod -R g+w ./
