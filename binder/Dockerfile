@@ -1,5 +1,5 @@
 # Dockerfile of the base image: https://github.com/IntEL4CoRo/docker-stacks/blob/master/Dockerfile
-FROM intel4coro/base-notebook:20.04-noetic
+FROM intel4coro/base-notebook:20.04-noetic-vnc
 
 # Path to the default ROS workspace
 ENV ROS_WS=${HOME}/workspace/ros
