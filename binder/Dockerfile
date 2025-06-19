@@ -1,25 +1,27 @@
-# Dockerfile of the base image: https://github.com/IntEL4CoRo/docker-stacks/blob/master/Dockerfile
-FROM intel4coro/base-notebook:noetic
+FROM ros:noetic-ros-base
 
-# Path to the default ROS workspace
-ENV ROS_WS=${HOME}/workspace/ros
+USER root
+ENV SHELL=/bin/bash
+ENV DEBIAN_FRONTEND=noninteractive
 
-#============= Install extra software packages =============#
-# Examples:
-# RUN apt update && apt install -y curl
-# RUN pip install numpy
-#===========================================================#
+# Create non-root user "jovyan"
+ENV NB_USER=jovyan
+ENV USER=${NB_USER}
+RUN adduser --disabled-password \
+    --gecos "Default user" \
+    ${NB_USER}
 
-# Copy content to the image
-ENV REPO_DIR=${HOME}/work
+# Install jupyterlab and git
+RUN apt-get update && apt-get install -y python3-pip git
+RUN pip3 install jupyterlab
+
+# Expose port for jupyterlab
+EXPOSE 8888
+
+# Copy repo to the image (optional)
+USER ${NB_USER}
+ENV REPO_DIR=/home/${NB_USER}/work
+RUN mkdir -p ${REPO_DIR}
 WORKDIR ${REPO_DIR}
 COPY --chown=${NB_USER}:users . ${REPO_DIR}/
 RUN git config --global --add safe.directory ${REPO_DIR}
-
-# Create a symbolic link to the ROS workspace under the working directory
-RUN ln -s ${ROS_WS} ${PWD}/ROS_WS
-
-# The entrypoint of the docker image
-COPY --chown=${NB_USER}:users binder/entrypoint.sh /entrypoint.sh
-ENTRYPOINT ["/entrypoint.sh"]
-
