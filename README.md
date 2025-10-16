@@ -48,6 +48,7 @@ RUN adduser --disabled-password \
     ${NB_USER}
 
 # Install jupyterlab and git
+USER root
 RUN apt-get update && apt-get install -y python3-pip git
 RUN pip3 install jupyterlab
 
@@ -61,6 +62,9 @@ RUN mkdir -p ${REPO_DIR}
 WORKDIR ${REPO_DIR}
 COPY --chown=${NB_USER}:users . ${REPO_DIR}/
 RUN git config --global --add safe.directory ${REPO_DIR}
+# The entrypoint of the docker image
+COPY --chown=${NB_USER}:users binder/entrypoint.sh /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
 ```
 
 ## Development
