@@ -4,51 +4,59 @@
 
 This is a template repo for running robotics research Jupyter Notebooks on Binderhub.
 
-Tutorials can be found here: https://vib.ai.uni-bremen.de/page/softwaretools/cloud-based-robotics-platform#zero-to-binder
+## Quick Start
 
-## ROS2
+### Launcher Urls
 
-To use ROS2, change the base image in the [Dockerfile](binder/Dockerfile), available image:
+- JupyterLab: https://binder.intel4coro.de/v2/gh/IntEL4CoRo/binder-template.git/main?urlpath=lab/tree/notebooks/mujoco.ipynb
 
-- intel4coro/base-notebook:jazzy
-- intel4coro/base-notebook:humble
+- VScode: https://binder.intel4coro.de/v2/gh/IntEL4CoRo/binder-template.git/main?urlpath=vscode?folder=/home/jovyan/work
 
-And edit the [entrypoint.sh](binder/entrypoint.sh) to:
+## Create a new VRB lab from this template
 
-```bash
-#!/bin/bash
-source ${ROS_PATH}/setup.bash
+1. Login to Github.
 
-exec "$@"
-```
+1. Use this template repository to create a new repository or fork it. Forking will make it easier to sync with future updates.
+
+1. Clone your git repo, add your notebooks, python code, other files to the repo.
+
+1. Modify the [requirements.txt](requirements.txt) to install additional python packages.
+
+1. Modify the [binder/Dockerfile](binder/Dockerfile) if your project needs additional APT packages.
+
+    Examples:
+
+    ```Dockerfile
+    USER root
+    RUN apt update
+    RUN apt install -y ffmpeg
+    ```
+
+1. Launch your VRB lab instance, replacing the placeholder content inside the curly braces `{}` with your actual information, and open in web browser.
+
+    ```
+    https://binder.dev.intel4coro.de/v2/gh/{YOUR_GITHUB_USER_NAME}/{YOUR_REPO_NAME}/main?urlpath=lab/tree/{PATH_TO_NOTEBOOK}
+    ```
+
+    The first time it is launched, it will take some time to build the Docker image.
 
 ## Use custom base docker image
 
 You can also other based images, such as your own built docker images or official ROS images.
 And a few additional steps are required:
 
-1. Create a non-root user
 1. Install JupyterLab
 1. Expose port 8888
 
-Example Dockerfile use ROS official image:
+Example Dockerfile use ROS1 official image:
 
 ```Dockerfile
 FROM ros:noetic-ros-base
 
-USER root
 ENV SHELL=/bin/bash
 ENV DEBIAN_FRONTEND=noninteractive
 
-# Create non-root user "jovyan"
-ENV NB_USER=jovyan
-ENV USER=${NB_USER}
-RUN adduser --disabled-password \
-    --gecos "Default user" \
-    ${NB_USER}
-
 # Install jupyterlab and git
-USER root
 RUN apt-get update && apt-get install -y python3-pip git
 RUN pip3 install jupyterlab
 
@@ -56,14 +64,12 @@ RUN pip3 install jupyterlab
 EXPOSE 8888
 
 # Copy repo to the image (optional)
-USER ${NB_USER}
-ENV REPO_DIR=/home/${NB_USER}/work
+ENV REPO_DIR=/home/repo
 RUN mkdir -p ${REPO_DIR}
+COPY . ${REPO_DIR}/
 WORKDIR ${REPO_DIR}
-COPY --chown=${NB_USER}:users . ${REPO_DIR}/
-RUN git config --global --add safe.directory ${REPO_DIR}
 # The entrypoint of the docker image
-COPY --chown=${NB_USER}:users binder/entrypoint.sh /entrypoint.sh
+COPY binder/entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 ```
 
@@ -71,16 +77,9 @@ ENTRYPOINT ["/entrypoint.sh"]
 
 ### Run and build docker image Locally (Under repo directory)
 
-- To make the current directory writable inside the container:
-
-  ```bash
-  chmod -R g+w ./
-  ```
-
 - Build and run docker image:
 
   ```bash
-  export GID=$(id -g) && \
   docker compose -f ./binder/docker-compose.yml up --build
   ```
 

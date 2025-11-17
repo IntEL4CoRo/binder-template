@@ -1,27 +1,22 @@
-# Dockerfile of the base image: https://github.com/IntEL4CoRo/docker-stacks/blob/master/Dockerfile
-FROM intel4coro/base-notebook:noetic
+# Dockerfile of the base image: https://github.com/IntEL4CoRo/jupyter-ros2/blob/main/Dockerfile
+FROM intel4coro/jupyter-ros2:jazzy-py3.12
 
-# Path to the default ROS workspace
-ENV ROS_WS=${HOME}/workspace/ros
-
+USER root
 #============= Install extra software packages =============#
-# Examples:
-
-# USER root
 # RUN apt update && apt install -y curl
-# RUN pip install numpy
+
+# Install python packages
+COPY requirements.txt /tmp/requirements.txt
+RUN pip install -r /tmp/requirements.txt
 #===========================================================#
 
 # Copy content to the image
-ENV REPO_DIR=${HOME}/work
+ENV REPO_DIR=/home/repo
+RUN mkdir -p ${REPO_DIR}
 WORKDIR ${REPO_DIR}
-COPY --chown=${NB_USER}:users . ${REPO_DIR}/
+COPY . ${REPO_DIR}/
 RUN git config --global --add safe.directory ${REPO_DIR}
 
-# Create a symbolic link to the ROS workspace under the working directory
-RUN ln -s ${ROS_WS} ${PWD}/ROS_WS
-
 # The entrypoint of the docker image
-COPY --chown=${NB_USER}:users binder/entrypoint.sh /entrypoint.sh
+COPY binder/entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
-

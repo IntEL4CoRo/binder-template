@@ -1,9 +1,7 @@
 #!/bin/bash
 
-# Launch the ROS core and web tools when containter starts
-source ${HOME}/workspace/ros/devel/setup.bash
-roscore &
-roslaunch --wait rvizweb rvizweb.launch &
+# Launch the ROS2
+source ${ROS_PATH}/setup.bash
 
 # Add other startup programs here
 
