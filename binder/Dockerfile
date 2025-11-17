@@ -13,9 +13,14 @@ RUN pip install -r /tmp/requirements.txt
 # Copy content to the image
 ENV REPO_DIR=/home/repo
 RUN mkdir -p ${REPO_DIR}
-WORKDIR ${REPO_DIR}
 COPY . ${REPO_DIR}/
 RUN git config --global --add safe.directory ${REPO_DIR}
+
+# Set JupyterLab default directory
+WORKDIR ${REPO_DIR}
+
+# Set VSCODE default directory
+ENV CODE_WORKING_DIRECTORY=${REPO_DIR}
 
 # The entrypoint of the docker image
 COPY binder/entrypoint.sh /entrypoint.sh

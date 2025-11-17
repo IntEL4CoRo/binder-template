@@ -10,7 +10,7 @@ This is a template repo for running robotics research Jupyter Notebooks on Binde
 
 - JupyterLab: https://binder.intel4coro.de/v2/gh/IntEL4CoRo/binder-template.git/main?urlpath=lab/tree/notebooks/mujoco.ipynb
 
-- VScode: https://binder.intel4coro.de/v2/gh/IntEL4CoRo/binder-template.git/main?urlpath=vscode?folder=/home/jovyan/work
+- VScode: https://binder.intel4coro.de/v2/gh/IntEL4CoRo/binder-template.git/main?urlpath=vscode?folder=/home/repo
 
 ## Create a new VRB lab from this template
 
