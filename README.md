@@ -32,12 +32,20 @@ This is a template repo for running robotics research Jupyter Notebooks on Binde
     RUN apt install -y ffmpeg
     ```
 
-1. Launch your VRB lab instance, replacing the placeholder content inside the curly braces `{}` with your actual information, and open in web browser.
+1. Use the following template to launch your notebook on Binder:
 
     ```
-    https://binder.dev.intel4coro.de/v2/gh/{YOUR_GITHUB_USER_NAME}/{YOUR_REPO_NAME}/main?urlpath=lab/tree/{PATH_TO_NOTEBOOK}
+    https://binder.intel4coro.de/v2/gh/{GITHUB_USER_NAME}/{REPO_NAME}/{REPO_BRANCH}?urlpath=lab/tree/{NOTEBOOK_PATH}
     ```
 
+    Replace each placeholder with your own information:
+
+      - `{GITHUB_USER_NAME}` => Your GitHub username.
+      - `{REPO_NAME}` => The name of your GitHub repository.
+      - `{REPO_BRANCH}` => The branch of your repository.
+      - `{NOTEBOOK_PATH}` => The relative path to the notebook file inside your repository
+      (for example: notebooks/mujoco.ipynb).
+  
     The first time it is launched, it will take some time to build the Docker image.
 
 ## Use custom base docker image
