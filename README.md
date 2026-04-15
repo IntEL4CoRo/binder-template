@@ -1,16 +1,22 @@
-# binder-template
+# binder-template (lite)
 
-[![Binder](https://binder.intel4coro.de/badge_logo.svg)](https://binder.intel4coro.de/v2/gh/IntEL4CoRo/binder-template.git/main)
+[![Binder](https://binder.intel4coro.de/badge_logo.svg)](https://binder.intel4coro.de/v2/gh/IntEL4CoRo/binder-template.git/lite)
 
 ## Introduction
 
-This is a template repository for creating Virtual Research Labs(VRL) as part of the [EASE Virtual Research Building (VRB)](https://vrb.ease-crc.org/) project.
+This is the **lightweight** version of the binder-template for creating Virtual Research Labs (VRL) as part of the [EASE Virtual Research Building (VRB)](https://vrb.ease-crc.org/) project.
 
-This template provides a foundation for running robotics research Jupyter Notebooks on Binderhub, enabling researchers to share interactive experiments and demonstrations.
+Unlike the full template (on the `main` branch) which includes ROS 2, MuJoCo, and a complete robotics stack, this lite image is built from bare **Ubuntu 24.04** and includes only:
+
+- **JupyterLab** — Notebook environment
+- **VNC Desktop** — Virtual desktop (XFCE4) for running graphical applications
+- **VSCode Server** — Browser-based code editor
+- **uv** — Fast Python package manager (replaces pip/conda)
+- **Claude Code** — AI coding assistant CLI
+
+Dependencies not pre-installed in the image (e.g., MuJoCo, NumPy) can be installed at runtime via `pip install` (backed by uv) or `uv pip install` inside notebooks or terminals.
 
 ## Quick Start
-
-Running with the MuJoCo interactive tutorial in just a few clicks. No installation required!
 
 ### Launcher Options
 
@@ -18,8 +24,8 @@ Click one of the following links to launch the lab:
 
 | Links | Description |
 |--------|-------------|
-| [**JupyterLab**](https://binder.intel4coro.de/v2/gh/IntEL4CoRo/binder-template.git/main?urlpath=lab/tree/notebooks/mujoco.ipynb) | Full-featured IDE with notebook editor, terminal, and file browser | [Launch](https://binder.intel4coro.de/v2/gh/IntEL4CoRo/binder-template.git/main?urlpath=lab/tree/notebooks/mujoco.ipynb) |
-| [**VSCode**](https://binder.intel4coro.de/v2/gh/IntEL4CoRo/binder-template.git/main?urlpath=vscode) | Browser-based code editor with full VSCode experience |
+| [**JupyterLab**](https://binder.intel4coro.de/v2/gh/IntEL4CoRo/binder-template.git/lite?urlpath=lab/tree/notebooks/mujoco.ipynb) | Full-featured IDE with notebook editor, terminal, and file browser | [Launch](https://binder.intel4coro.de/v2/gh/IntEL4CoRo/binder-template.git/lite?urlpath=lab/tree/notebooks/mujoco.ipynb) |
+| [**VSCode**](https://binder.intel4coro.de/v2/gh/IntEL4CoRo/binder-template.git/lite?urlpath=vscode) | Browser-based code editor with full VSCode experience |
 
 ### Launcher URL Parameters
 
@@ -103,15 +109,14 @@ You can work with your repository either locally or using GitHub Codespace:
 
 #### **Use other base docker image (Advanced)**
 
-The current template uses the following base Docker image: `intel4coro/jupyter-ros2:jazzy-py3.12`
+The lite template uses `ubuntu:24.04` as its base Docker image with the following tools installed on top:
 
-This base image includes:
-- **ROS 2 Jazzy** - Robot Operating System 2 (Jazzy distribution)
-- **Python 3.12** - Installed via conda
-- **JupyterLab** - Notebook environment
-- **Conda/Mamba** - Package manager
-- **VSCode Server** - Browser-based VSCode
-- **VNC Desktop** - Virtual desktop for running linux native graphical applications like MuJoCo viewer, Rviz, Gazebo
+- **Python 3.12** — Installed and managed via uv
+- **JupyterLab** — Notebook environment
+- **uv** — Fast Python package manager (pip/pip3 commands are backed by uv)
+- **VSCode Server** — Browser-based VSCode (code-server)
+- **VNC Desktop** — Virtual XFCE4 desktop for running graphical applications
+- **Claude Code** — AI coding assistant CLI
 
 It is possible to use use other base images such as your own built docker images, official ROS images, just replace the base image in dockerfile and:
 

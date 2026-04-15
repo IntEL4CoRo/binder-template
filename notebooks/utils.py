@@ -46,8 +46,16 @@ def display_desktop(anchor="split-right"):
                 bottom: 0;
                 background: transparent;
             }}
+
+            .jp-RenderedHTMLCommon:has(.iframe-widget) {{
+                padding-right: 0;
+                overflow: hidden;
+            }}
+            .jp-RenderedHTMLCommon > .iframe-widget:last-child {{
+                margin-bottom: 0;
+            }}
             </style>
-            <div class="iframe-widget" style="width: calc(100% + 10px);height:100%;">
-                <iframe src="{remote_desktop_url}" width="100%" height="100%"></iframe>
+            <div class="iframe-widget" style="width:100%;height:100%;overflow:hidden;">
+                <iframe src="{remote_desktop_url}" style="width:100%;height:100%;border:none;margin:0;padding:0;display:block;"></iframe>
             </div>
         """))
