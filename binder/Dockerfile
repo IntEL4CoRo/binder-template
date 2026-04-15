@@ -12,7 +12,7 @@ ENV DEBIAN_FRONTEND=noninteractive \
 
 # System dependencies + VNC server + lightweight desktop
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    git curl vim ca-certificates tmux \
+    sudo git curl vim ca-certificates tmux \
     xfce4 xfce4-terminal \
     xubuntu-icon-theme \
     tigervnc-standalone-server \
@@ -34,6 +34,13 @@ RUN printf '#!/bin/sh\nexec uv pip "$@"\n' > /usr/local/bin/pip \
 
 # code-server (VSCode in browser)
 RUN curl -fsSL https://code-server.dev/install.sh | sh
+RUN code-server --install-extension ms-python.python \
+  && code-server --install-extension ms-toolsai.jupyter
+
+# Tell the Python extension about the uv-managed venv
+RUN mkdir -p /root/.local/share/code-server/User \
+    && printf '{\n  "python.defaultInterpreterPath": "/opt/venv/bin/python",\n  "python.venvPath": "/opt",\n  "python.venvFolders": ["venv"]\n}\n' \
+       > /root/.local/share/code-server/User/settings.json
 
 # JupyterLab + proxy integrations
 RUN uv pip install \

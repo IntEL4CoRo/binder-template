@@ -19,7 +19,7 @@ def display_desktop(anchor="split-right"):
     except KeyError:
         jupyterhub_user = None
         domain_name = "http://localhost:8888"
-    url_prefix = f"{domain_name}/user/{jupyterhub_user}" if jupyterhub_user is not None else ''
+    url_prefix = f"{domain_name}/user/{jupyterhub_user}" if jupyterhub_user is not None else domain_name
 
     remote_desktop_url = f"{url_prefix}/desktop"
 

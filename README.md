@@ -4,7 +4,7 @@
 
 ## Introduction
 
-This is the **lightweight** version of the binder-template for creating Virtual Research Labs (VRL) as part of the [EASE Virtual Research Building (VRB)](https://vrb.ease-crc.org/) project.
+This is the **lightweight** (700MB) version of the binder-template for creating Virtual Research Labs (VRL) as part of the [EASE Virtual Research Building (VRB)](https://vrb.ease-crc.org/) project.
 
 Unlike the full template (on the `main` branch) which includes ROS 2, MuJoCo, and a complete robotics stack, this lite image is built from bare **Ubuntu 24.04** and includes only:
 
