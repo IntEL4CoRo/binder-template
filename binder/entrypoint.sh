@@ -4,6 +4,10 @@ set -e
 
 source "${ROS_PATH}/setup.bash"
 
+if [[ -f /workspace/ros/install/setup.bash ]]; then
+    source /workspace/ros/install/setup.bash
+fi
+
 log_startup_context() {
     local log_file="/tmp/binder-startup.log"
     {
@@ -28,6 +32,26 @@ import_workspace() {
 
     jupyter lab workspaces import "${workspace_file}" >/tmp/jupyter-workspace-import.log 2>&1 || \
         echo "Workspace import failed; see /tmp/jupyter-workspace-import.log" >&2
+}
+
+update_cognitive_architecture() {
+    local repo_dir=""
+
+    for candidate in         "/home/jovyan/libs/cognitive_robot_abstract_machine"         "/root/libs/cognitive_robot_abstract_machine"
+    do
+        if [[ -d "${candidate}/.git" ]]; then
+            repo_dir="${candidate}"
+            break
+        fi
+    done
+
+    if [[ -z "${repo_dir}" ]]; then
+        echo "No cognitive_robot_abstract_machine checkout found to update" >&2
+        return
+    fi
+
+    echo "Updating cognitive_robot_abstract_machine in ${repo_dir}" >&2
+    git -C "${repo_dir}" pull --ff-only >/tmp/cognitive-architecture-pull.log 2>&1 ||         echo "cognitive_robot_abstract_machine update failed; see /tmp/cognitive-architecture-pull.log" >&2
 }
 
 start_rviz() {
@@ -77,6 +101,7 @@ start_rviz() {
 }
 
 log_startup_context "$@"
+update_cognitive_architecture
 import_workspace
 start_rviz
 

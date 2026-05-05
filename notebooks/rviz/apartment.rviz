@@ -1,0 +1,636 @@
+Panels:
+  - Class: rviz_common/Displays
+    Help Height: 78
+    Name: Displays
+    Property Tree Widget:
+      Expanded:
+        - /Global Options1
+        - /Status1
+        - /InteractiveMarkers1
+        - /MarkerArray2
+        - /MarkerArray3
+        - /MarkerArray4
+        - /TF1/Frames1
+        - /MarkerArray6
+        - /MarkerArray7
+        - /MarkerArray8
+        - /MarkerArray8/Topic1
+      Splitter Ratio: 0.3847102224826813
+    Tree Height: 1103
+  - Class: rviz_common/Selection
+    Name: Selection
+  - Class: rviz_common/Tool Properties
+    Expanded:
+      - /2D Goal Pose1
+      - /Publish Point1
+    Name: Tool Properties
+    Splitter Ratio: 0.5886790156364441
+  - Class: rviz_common/Views
+    Expanded:
+      - /Current View1
+    Name: Views
+    Splitter Ratio: 0.5
+  - Class: rviz_common/Time
+    Experimental: false
+    Name: Time
+    SyncMode: 0
+    SyncSource: ""
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Alpha: 0.5
+      Cell Size: 1
+      Class: rviz_default_plugins/Grid
+      Color: 160; 160; 164
+      Enabled: true
+      Line Style:
+        Line Width: 0.029999999329447746
+        Value: Lines
+      Name: Grid
+      Normal Cell Count: 0
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Plane: XY
+      Plane Cell Count: 10
+      Reference Frame: <Fixed Frame>
+      Value: true
+    - Class: rviz_default_plugins/MarkerArray
+      Enabled: true
+      Name: MarkerArray
+      Namespaces:
+        Armar7/Ankle_body_link: true
+        Armar7/ArmL1_Cla1_body_link: true
+        Armar7/ArmL2_Sho1_body_link: true
+        Armar7/ArmL3_Sho2_body_link: true
+        Armar7/ArmL4_Sho3_body_link: true
+        Armar7/ArmL5_Elb1_body_link: true
+        Armar7/ArmL6_Elb2_body_link: true
+        Armar7/ArmR1_Cla1_body_link: true
+        Armar7/ArmR2_Sho1_body_link: true
+        Armar7/ArmR3_Sho2_body_link: true
+        Armar7/ArmR4_Sho3_body_link: true
+        Armar7/ArmR5_Elb1_body_link: true
+        Armar7/ArmR6_Elb2_body_link: true
+        Armar7/AzureKinect_body_link: true
+        Armar7/CenterArms_body_link: true
+        Armar7/Hand L Palm_link: true
+        Armar7/Hand R Palm_link: true
+        Armar7/HandL_Adapter_link: true
+        Armar7/HandR_Adapter_link: true
+        Armar7/Head_body_link: true
+        Armar7/Hip_body_link: true
+        Armar7/Index L 1 Body_link: true
+        Armar7/Index L 2 Body_link: true
+        Armar7/Index R 1 Body_link: true
+        Armar7/Index R 2 Body_link: true
+        Armar7/Knee_body_link: true
+        Armar7/LaserScannerBackLeftBody_link: true
+        Armar7/LaserScannerBackRightBody_link: true
+        Armar7/LaserScannerFrontBody_link: true
+        Armar7/Middle L 1 Body_link: true
+        Armar7/Middle L 2 Body_link: true
+        Armar7/Middle R 1 Body_link: true
+        Armar7/Middle R 2 Body_link: true
+        Armar7/Neck_1_Yaw_body_link: true
+        Armar7/Neck_2_Pitch_body_link: true
+        Armar7/Neck_body_link: true
+        Armar7/Pinky L 1 Body_link: true
+        Armar7/Pinky L 2 Body_link: true
+        Armar7/Pinky R 1 Body_link: true
+        Armar7/Pinky R 2 Body_link: true
+        Armar7/Platform_body_link: true
+        Armar7/Ring L 1 Body_link: true
+        Armar7/Ring L 2 Body_link: true
+        Armar7/Ring R 1 Body_link: true
+        Armar7/Ring R 2 Body_link: true
+        Armar7/Thumb L 1 Body_link: true
+        Armar7/Thumb L 2 Body_link: true
+        Armar7/Thumb L 3 Body_link: true
+        Armar7/Thumb R 1 Body_link: true
+        Armar7/Thumb R 2 Body_link: true
+        Armar7/Thumb R 3 Body_link: true
+        Armar7/Torso_root_body_link: true
+        apartment/armchair: true
+        apartment/bedside_table: true
+        apartment/cabinet1: true
+        apartment/cabinet10: true
+        apartment/cabinet10_drawer_bottom: true
+        apartment/cabinet10_drawer_middle: true
+        apartment/cabinet10_drawer_top: true
+        apartment/cabinet11: true
+        apartment/cabinet11_drawer_bottom: true
+        apartment/cabinet11_drawer_middle: true
+        apartment/cabinet11_drawer_top: true
+        apartment/cabinet1_coloksu_level4: true
+        apartment/cabinet1_coloksu_level5: true
+        apartment/cabinet1_door_top_left: true
+        apartment/cabinet1_drawer_bottom: true
+        apartment/cabinet1_drawer_middle: true
+        apartment/cabinet2: true
+        apartment/cabinet2_door_left: true
+        apartment/cabinet2_drawer_big: true
+        apartment/cabinet2_drawer_small: true
+        apartment/cabinet3: true
+        apartment/cabinet3_door_bottom_left: true
+        apartment/cabinet3_door_top_left: true
+        apartment/cabinet4: true
+        apartment/cabinet4_door_bottom: true
+        apartment/cabinet4_door_top: true
+        apartment/cabinet5: true
+        apartment/cabinet5_drawer_bottom: true
+        apartment/cabinet5_drawer_middle: true
+        apartment/cabinet5_drawer_top: true
+        apartment/cabinet6: true
+        apartment/cabinet6_drawer_bottom: true
+        apartment/cabinet6_drawer_middle: true
+        apartment/cabinet6_drawer_top: true
+        apartment/cabinet7: true
+        apartment/cabinet7_door_bottom_left: true
+        apartment/cabinet8: true
+        apartment/cabinet8_drawer_bottom: true
+        apartment/cabinet8_drawer_middle: true
+        apartment/cabinet9: true
+        apartment/cabinet9_drawer_bottom: true
+        apartment/cabinet9_drawer_middle: true
+        apartment/cabinet9_drawer_top: true
+        apartment/coffe_machine: true
+        apartment/coffee_table: true
+        apartment/coffee_table_drawer: true
+        apartment/cooktop: true
+        apartment/countertop: true
+        apartment/dishwasher_drawer_middle: true
+        apartment/handle_cab10_b: true
+        apartment/handle_cab10_m: true
+        apartment/handle_cab10_t: true
+        apartment/handle_cab11_b: true
+        apartment/handle_cab11_m: true
+        apartment/handle_cab11_t: true
+        apartment/handle_cab1_drawer_bottom: true
+        apartment/handle_cab1_drawer_mid: true
+        apartment/handle_cab1_top_door: true
+        apartment/handle_cab2_door: true
+        apartment/handle_cab3_door_bottom: true
+        apartment/handle_cab3_door_top: true
+        apartment/handle_cab4_door_bottom: true
+        apartment/handle_cab5_b: true
+        apartment/handle_cab5_m: true
+        apartment/handle_cab5_t: true
+        apartment/handle_cab6_b: true
+        apartment/handle_cab6_m: true
+        apartment/handle_cab6_t: true
+        apartment/handle_cab7: true
+        apartment/handle_cab7_middle: true
+        apartment/handle_cab8: true
+        apartment/handle_cab9_b: true
+        apartment/handle_cab9_m: true
+        apartment/handle_cab9_t: true
+        apartment/island_back: true
+        apartment/island_countertop: true
+        apartment/island_waterfall_left: true
+        apartment/island_waterfall_right: true
+        apartment/oven: true
+        apartment/side_A_left: true
+        apartment/side_A_rb: true
+        apartment/side_A_rt: true
+        apartment/sink: true
+        apartment/sofa: true
+        apartment/table_area_main: true
+        apartment/tap_body: true
+        apartment/tap_handle: true
+        apartment/useless_underbar_a: true
+        apartment/useless_underbar_b: true
+        apartment/wardrobe: true
+        apartment/wardrobe_door_left: true
+        apartment/wardrobe_door_left_handle: true
+        apartment/wardrobe_door_right: true
+        apartment/wardrobe_door_right_handle: true
+        apartment/windows: true
+        bread_0001: true
+        cutting_board_0001: true
+        hsrb/arm_flex_link: true
+        hsrb/arm_lift_link: true
+        hsrb/arm_roll_link: true
+        hsrb/base_b_bumper_link: true
+        hsrb/base_f_bumper_link: true
+        hsrb/base_l_drive_wheel_link: true
+        hsrb/base_l_passive_wheel_z_link: true
+        hsrb/base_link: true
+        hsrb/base_r_drive_wheel_link: true
+        hsrb/base_r_passive_wheel_z_link: true
+        hsrb/base_range_sensor_link: true
+        hsrb/hand_l_distal_link: true
+        hsrb/hand_l_finger_vacuum_frame: true
+        hsrb/hand_l_spring_proximal_link: true
+        hsrb/hand_palm_link: true
+        hsrb/hand_r_distal_link: true
+        hsrb/hand_r_spring_proximal_link: true
+        hsrb/head_l_stereo_camera_link: true
+        hsrb/head_pan_link: true
+        hsrb/head_r_stereo_camera_link: true
+        hsrb/head_rgbd_sensor_link: true
+        hsrb/head_tilt_link: true
+        hsrb/torso_lift_link: true
+        hsrb/wrist_flex_link: true
+        hsrb/wrist_roll_link: true
+        knife_left: true
+        knife_right: true
+        offis_unitree_g1/head_link: true
+        offis_unitree_g1/left_ankle_pitch_link: true
+        offis_unitree_g1/left_ankle_roll_link: true
+        offis_unitree_g1/left_elbow_link: true
+        offis_unitree_g1/left_hand_index_0_link: true
+        offis_unitree_g1/left_hand_index_1_link: true
+        offis_unitree_g1/left_hand_middle_0_link: true
+        offis_unitree_g1/left_hand_middle_1_link: true
+        offis_unitree_g1/left_hand_palm_link: true
+        offis_unitree_g1/left_hand_thumb_0_link: true
+        offis_unitree_g1/left_hand_thumb_1_link: true
+        offis_unitree_g1/left_hand_thumb_2_link: true
+        offis_unitree_g1/left_hip_pitch_link: true
+        offis_unitree_g1/left_hip_roll_link: true
+        offis_unitree_g1/left_hip_yaw_link: true
+        offis_unitree_g1/left_knee_link: true
+        offis_unitree_g1/left_shoulder_pitch_link: true
+        offis_unitree_g1/left_shoulder_roll_link: true
+        offis_unitree_g1/left_shoulder_yaw_link: true
+        offis_unitree_g1/left_wrist_pitch_link: true
+        offis_unitree_g1/left_wrist_roll_link: true
+        offis_unitree_g1/left_wrist_yaw_link: true
+        offis_unitree_g1/logo_link: true
+        offis_unitree_g1/pelvis: true
+        offis_unitree_g1/pelvis_contour_link: true
+        offis_unitree_g1/right_ankle_pitch_link: true
+        offis_unitree_g1/right_ankle_roll_link: true
+        offis_unitree_g1/right_elbow_link: true
+        offis_unitree_g1/right_hand_index_0_link: true
+        offis_unitree_g1/right_hand_index_1_link: true
+        offis_unitree_g1/right_hand_middle_0_link: true
+        offis_unitree_g1/right_hand_middle_1_link: true
+        offis_unitree_g1/right_hand_palm_link: true
+        offis_unitree_g1/right_hand_thumb_0_link: true
+        offis_unitree_g1/right_hand_thumb_1_link: true
+        offis_unitree_g1/right_hand_thumb_2_link: true
+        offis_unitree_g1/right_hip_pitch_link: true
+        offis_unitree_g1/right_hip_roll_link: true
+        offis_unitree_g1/right_hip_yaw_link: true
+        offis_unitree_g1/right_knee_link: true
+        offis_unitree_g1/right_shoulder_pitch_link: true
+        offis_unitree_g1/right_shoulder_roll_link: true
+        offis_unitree_g1/right_shoulder_yaw_link: true
+        offis_unitree_g1/right_wrist_pitch_link: true
+        offis_unitree_g1/right_wrist_roll_link: true
+        offis_unitree_g1/right_wrist_yaw_link: true
+        offis_unitree_g1/torso_link: true
+        offis_unitree_g1/waist_roll_link: true
+        offis_unitree_g1/waist_yaw_link: true
+        rollin_justin/base_footprint: true
+        rollin_justin/base_link: true
+        rollin_justin/head1: true
+        rollin_justin/head2: true
+        rollin_justin/left_1thumb2: true
+        rollin_justin/left_1thumb3: true
+        rollin_justin/left_1thumb4: true
+        rollin_justin/left_1thumb_base: true
+        rollin_justin/left_2tip2: true
+        rollin_justin/left_2tip3: true
+        rollin_justin/left_2tip4: true
+        rollin_justin/left_2tip_base: true
+        rollin_justin/left_3middle2: true
+        rollin_justin/left_3middle3: true
+        rollin_justin/left_3middle4: true
+        rollin_justin/left_3middle_base: true
+        rollin_justin/left_4ring2: true
+        rollin_justin/left_4ring3: true
+        rollin_justin/left_4ring4: true
+        rollin_justin/left_4ring_base: true
+        rollin_justin/left_arm1: true
+        rollin_justin/left_arm2: true
+        rollin_justin/left_arm3: true
+        rollin_justin/left_arm4: true
+        rollin_justin/left_arm5: true
+        rollin_justin/left_arm6: true
+        rollin_justin/left_arm7: true
+        rollin_justin/right_1thumb2: true
+        rollin_justin/right_1thumb3: true
+        rollin_justin/right_1thumb4: true
+        rollin_justin/right_1thumb_base: true
+        rollin_justin/right_2tip2: true
+        rollin_justin/right_2tip3: true
+        rollin_justin/right_2tip4: true
+        rollin_justin/right_2tip_base: true
+        rollin_justin/right_3middle2: true
+        rollin_justin/right_3middle3: true
+        rollin_justin/right_3middle4: true
+        rollin_justin/right_3middle_base: true
+        rollin_justin/right_4ring2: true
+        rollin_justin/right_4ring3: true
+        rollin_justin/right_4ring4: true
+        rollin_justin/right_4ring_base: true
+        rollin_justin/right_arm1: true
+        rollin_justin/right_arm2: true
+        rollin_justin/right_arm3: true
+        rollin_justin/right_arm4: true
+        rollin_justin/right_arm5: true
+        rollin_justin/right_arm6: true
+        rollin_justin/right_arm7: true
+        rollin_justin/torso1: true
+        rollin_justin/torso2: true
+        rollin_justin/torso3: true
+        rollin_justin/torso4: true
+        stretch_description/base_imu: true
+        stretch_description/base_link: true
+        stretch_description/camera_link: true
+        stretch_description/caster_link: true
+        stretch_description/laser: true
+        stretch_description/link_arm_l0: true
+        stretch_description/link_arm_l1: true
+        stretch_description/link_arm_l2: true
+        stretch_description/link_arm_l3: true
+        stretch_description/link_arm_l4: true
+        stretch_description/link_aruco_inner_wrist: true
+        stretch_description/link_aruco_left_base: true
+        stretch_description/link_aruco_right_base: true
+        stretch_description/link_aruco_shoulder: true
+        stretch_description/link_aruco_top_wrist: true
+        stretch_description/link_gripper_finger_left: true
+        stretch_description/link_gripper_finger_right: true
+        stretch_description/link_gripper_fingertip_left: true
+        stretch_description/link_gripper_fingertip_right: true
+        stretch_description/link_head: true
+        stretch_description/link_head_pan: true
+        stretch_description/link_head_tilt: true
+        stretch_description/link_left_wheel: true
+        stretch_description/link_lift: true
+        stretch_description/link_mast: true
+        stretch_description/link_right_wheel: true
+        stretch_description/link_straight_gripper: true
+        stretch_description/link_wrist_pitch: true
+        stretch_description/link_wrist_roll: true
+        stretch_description/link_wrist_yaw: true
+        stretch_description/link_wrist_yaw_bottom: true
+        stretch_description/respeaker_base: true
+        tiago_dual/arm_left_1_link: true
+        tiago_dual/arm_left_2_link: true
+        tiago_dual/arm_left_3_link: true
+        tiago_dual/arm_left_4_link: true
+        tiago_dual/arm_left_5_link: true
+        tiago_dual/arm_left_6_link: true
+        tiago_dual/arm_left_tool_link: true
+        tiago_dual/arm_right_1_link: true
+        tiago_dual/arm_right_2_link: true
+        tiago_dual/arm_right_3_link: true
+        tiago_dual/arm_right_4_link: true
+        tiago_dual/arm_right_5_link: true
+        tiago_dual/arm_right_6_link: true
+        tiago_dual/arm_right_tool_link: true
+        tiago_dual/base_antenna_left_link: true
+        tiago_dual/base_antenna_right_link: true
+        tiago_dual/base_cover_link: true
+        tiago_dual/base_dock_link: true
+        tiago_dual/base_laser_link: true
+        tiago_dual/base_link: true
+        tiago_dual/base_sonar_01_link: true
+        tiago_dual/base_sonar_02_link: true
+        tiago_dual/base_sonar_03_link: true
+        tiago_dual/caster_back_left_1_link: true
+        tiago_dual/caster_back_left_2_link: true
+        tiago_dual/caster_back_right_1_link: true
+        tiago_dual/caster_back_right_2_link: true
+        tiago_dual/caster_front_left_1_link: true
+        tiago_dual/caster_front_left_2_link: true
+        tiago_dual/caster_front_right_1_link: true
+        tiago_dual/caster_front_right_2_link: true
+        tiago_dual/gripper_left_base_link: true
+        tiago_dual/gripper_left_coupler_link: true
+        tiago_dual/gripper_left_left_inner_finger: true
+        tiago_dual/gripper_left_left_inner_finger_pad: true
+        tiago_dual/gripper_left_left_inner_knuckle: true
+        tiago_dual/gripper_left_left_outer_finger: true
+        tiago_dual/gripper_left_left_outer_knuckle: true
+        tiago_dual/gripper_left_right_inner_finger: true
+        tiago_dual/gripper_left_right_inner_finger_pad: true
+        tiago_dual/gripper_left_right_inner_knuckle: true
+        tiago_dual/gripper_left_right_outer_finger: true
+        tiago_dual/gripper_left_right_outer_knuckle: true
+        tiago_dual/gripper_right_base_link: true
+        tiago_dual/gripper_right_coupler_link: true
+        tiago_dual/gripper_right_left_inner_finger: true
+        tiago_dual/gripper_right_left_inner_finger_pad: true
+        tiago_dual/gripper_right_left_inner_knuckle: true
+        tiago_dual/gripper_right_left_outer_finger: true
+        tiago_dual/gripper_right_left_outer_knuckle: true
+        tiago_dual/gripper_right_right_inner_finger: true
+        tiago_dual/gripper_right_right_inner_finger_pad: true
+        tiago_dual/gripper_right_right_inner_knuckle: true
+        tiago_dual/gripper_right_right_outer_finger: true
+        tiago_dual/gripper_right_right_outer_knuckle: true
+        tiago_dual/head_1_link: true
+        tiago_dual/head_2_link: true
+        tiago_dual/torso_fixed_column_link: true
+        tiago_dual/torso_fixed_link: true
+        tiago_dual/torso_lift_link: true
+        tiago_dual/wheel_left_link: true
+        tiago_dual/wheel_right_link: true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /semworld/viz_marker
+      Value: true
+    - Class: rviz_default_plugins/InteractiveMarkers
+      Enable Transparency: true
+      Enabled: true
+      Interactive Markers Namespace: /phase_sequence_markers
+      Name: InteractiveMarkers
+      Show Axes: false
+      Show Descriptions: true
+      Show Visual Aids: false
+      Value: true
+    - Class: rviz_default_plugins/MarkerArray
+      Enabled: true
+      Name: MarkerArray
+      Namespaces:
+        {}
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /phase_sequence_markers_bowl
+      Value: true
+    - Class: rviz_default_plugins/MarkerArray
+      Enabled: true
+      Name: MarkerArray
+      Namespaces:
+        points_sequence_1: true
+        points_sequence_2: true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /point_sequence
+      Value: true
+    - Class: rviz_default_plugins/MarkerArray
+      Enabled: true
+      Name: MarkerArray
+      Namespaces:
+        {}
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /pose_sequence
+      Value: true
+    - Class: rviz_default_plugins/MarkerArray
+      Enabled: true
+      Name: MarkerArray
+      Namespaces:
+        {}
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /pycram/wipe_targets
+      Value: true
+    - Class: rviz_default_plugins/TF
+      Enabled: false
+      Filter (blacklist): ""
+      Filter (whitelist): ""
+      Frame Timeout: 1000
+      Frames:
+        All Enabled: false
+      Marker Scale: 1
+      Name: TF
+      Show Arrows: true
+      Show Axes: true
+      Show Names: false
+      Tree:
+        {}
+      Update Interval: 0
+      Value: false
+    - Class: rviz_default_plugins/MarkerArray
+      Enabled: true
+      Name: MarkerArray
+      Namespaces:
+        {}
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /debug/costmap/final
+      Value: true
+    - Class: rviz_default_plugins/MarkerArray
+      Enabled: false
+      Name: MarkerArray
+      Namespaces:
+        {}
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /debug/costmap/occupancy
+      Value: false
+    - Class: rviz_default_plugins/MarkerArray
+      Enabled: false
+      Name: MarkerArray
+      Namespaces:
+        {}
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /debug/costmap/ring
+      Value: false
+  Enabled: true
+  Global Options:
+    Background Color: 48; 48; 48
+    Fixed Frame: map
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz_default_plugins/Interact
+      Hide Inactive Objects: true
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/Select
+    - Class: rviz_default_plugins/FocusCamera
+    - Class: rviz_default_plugins/Measure
+      Line color: 128; 128; 0
+    - Class: rviz_default_plugins/SetInitialPose
+      Covariance x: 0.25
+      Covariance y: 0.25
+      Covariance yaw: 0.06853891909122467
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /initialpose
+    - Class: rviz_default_plugins/SetGoal
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /goal_pose
+    - Class: rviz_default_plugins/PublishPoint
+      Single click: true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /clicked_point
+  Transformation:
+    Current:
+      Class: rviz_default_plugins/TF
+  Value: true
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Distance: 4.143653869628906
+      Enable Stereo Rendering:
+        Stereo Eye Separation: 0.05999999865889549
+        Stereo Focal Distance: 1
+        Swap Stereo Eyes: false
+        Value: false
+      Focal Point:
+        X: 1.3706196546554565
+        Y: 2.358107566833496
+        Z: 0.6059302091598511
+      Focal Shape Fixed Size: true
+      Focal Shape Size: 0.05000000074505806
+      Invert Z Axis: false
+      Name: Current View
+      Near Clip Distance: 0.009999999776482582
+      Pitch: 0.4247969090938568
+      Target Frame: <Fixed Frame>
+      Value: Orbit (rviz_default_plugins)
+      Yaw: 6.257602691650391
+    Saved: ~
+Window Geometry:
+  Displays:
+    collapsed: true
+  Height: 1403
+  Hide Left Dock: true
+  Hide Right Dock: true
+  QMainWindow State: 000000ff00000000fd00000004000000000000025f000004ddfc0200000008fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000004100fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073000000003b000004dd0000009400fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c0000026100000001000001c9000004ddfc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073000000003b000004dd0000008d00fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000005000000003efc0100000002fb0000000800540069006d00650100000000000005000000026f00fffffffb0000000800540069006d0065010000000000000450000000000000000000000500000004dd00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  Selection:
+    collapsed: false
+  Time:
+    collapsed: false
+  Tool Properties:
+    collapsed: false
+  Views:
+    collapsed: true
+  Width: 1280
+  X: 1280
+  Y: 0

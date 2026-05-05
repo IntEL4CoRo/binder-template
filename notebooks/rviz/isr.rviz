@@ -1,0 +1,380 @@
+Panels:
+  - Class: rviz_common/Displays
+    Help Height: 78
+    Name: Displays
+    Property Tree Widget:
+      Expanded:
+        - /Global Options1
+        - /Status1
+        - /InteractiveMarkers1
+        - /MarkerArray2
+        - /MarkerArray3
+        - /MarkerArray4
+        - /TF1/Frames1
+        - /MarkerArray6
+        - /MarkerArray7
+        - /MarkerArray8
+        - /MarkerArray8/Topic1
+      Splitter Ratio: 0.3847102224826813
+    Tree Height: 1103
+  - Class: rviz_common/Selection
+    Name: Selection
+  - Class: rviz_common/Tool Properties
+    Expanded:
+      - /2D Goal Pose1
+      - /Publish Point1
+    Name: Tool Properties
+    Splitter Ratio: 0.5886790156364441
+  - Class: rviz_common/Views
+    Expanded:
+      - /Current View1
+    Name: Views
+    Splitter Ratio: 0.5
+  - Class: rviz_common/Time
+    Experimental: false
+    Name: Time
+    SyncMode: 0
+    SyncSource: ""
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Alpha: 0.5
+      Cell Size: 1
+      Class: rviz_default_plugins/Grid
+      Color: 160; 160; 164
+      Enabled: true
+      Line Style:
+        Line Width: 0.029999999329447746
+        Value: Lines
+      Name: Grid
+      Normal Cell Count: 0
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Plane: XY
+      Plane Cell Count: 10
+      Reference Frame: <Fixed Frame>
+      Value: true
+    - Class: rviz_default_plugins/MarkerArray
+      Enabled: true
+      Name: MarkerArray
+      Namespaces:
+        Armar7/Ankle_body_link: true
+        Armar7/ArmL1_Cla1_body_link: true
+        Armar7/ArmL2_Sho1_body_link: true
+        Armar7/ArmL3_Sho2_body_link: true
+        Armar7/ArmL4_Sho3_body_link: true
+        Armar7/ArmL5_Elb1_body_link: true
+        Armar7/ArmL6_Elb2_body_link: true
+        Armar7/ArmR1_Cla1_body_link: true
+        Armar7/ArmR2_Sho1_body_link: true
+        Armar7/ArmR3_Sho2_body_link: true
+        Armar7/ArmR4_Sho3_body_link: true
+        Armar7/ArmR5_Elb1_body_link: true
+        Armar7/ArmR6_Elb2_body_link: true
+        Armar7/AzureKinect_body_link: true
+        Armar7/CenterArms_body_link: true
+        Armar7/Hand L Palm_link: true
+        Armar7/Hand R Palm_link: true
+        Armar7/HandL_Adapter_link: true
+        Armar7/HandR_Adapter_link: true
+        Armar7/Head_body_link: true
+        Armar7/Hip_body_link: true
+        Armar7/Index L 1 Body_link: true
+        Armar7/Index L 2 Body_link: true
+        Armar7/Index R 1 Body_link: true
+        Armar7/Index R 2 Body_link: true
+        Armar7/Knee_body_link: true
+        Armar7/LaserScannerBackLeftBody_link: true
+        Armar7/LaserScannerBackRightBody_link: true
+        Armar7/LaserScannerFrontBody_link: true
+        Armar7/Middle L 1 Body_link: true
+        Armar7/Middle L 2 Body_link: true
+        Armar7/Middle R 1 Body_link: true
+        Armar7/Middle R 2 Body_link: true
+        Armar7/Neck_1_Yaw_body_link: true
+        Armar7/Neck_2_Pitch_body_link: true
+        Armar7/Neck_body_link: true
+        Armar7/Pinky L 1 Body_link: true
+        Armar7/Pinky L 2 Body_link: true
+        Armar7/Pinky R 1 Body_link: true
+        Armar7/Pinky R 2 Body_link: true
+        Armar7/Platform_body_link: true
+        Armar7/Ring L 1 Body_link: true
+        Armar7/Ring L 2 Body_link: true
+        Armar7/Ring R 1 Body_link: true
+        Armar7/Ring R 2 Body_link: true
+        Armar7/Thumb L 1 Body_link: true
+        Armar7/Thumb L 2 Body_link: true
+        Armar7/Thumb L 3 Body_link: true
+        Armar7/Thumb R 1 Body_link: true
+        Armar7/Thumb R 2 Body_link: true
+        Armar7/Thumb R 3 Body_link: true
+        Armar7/Torso_root_body_link: true
+        bread_0001: true
+        cutting_board_0001: true
+        knife_left: true
+        knife_right: true
+        world/apple_juice_box__apple_juice__base_link: true
+        world/aruco_marker_0__aruco_marker_0__link_0: true
+        world/basmati_rice__basmati_rice__base_link: true
+        world/bed__bed__link_0: true
+        world/beer__beer__link: true
+        world/cabinet_diamondback__cabinet_diamondback__base_link: true
+        world/cabinet_ikea_galant__cabinet_ikea_galant__base_link: true
+        world/chair1__tv_chair__link_0: true
+        world/chair2__tv_chair__link_0: true
+        world/chair_dinning_room_1__simple_chair__link_0: true
+        world/chair_dinning_room_2__simple_chair__link_0: true
+        world/chair_kitchen_1__simple_chair__link_0: true
+        world/chair_kitchen_2__simple_chair__link_0: true
+        world/chair_kitchen_3__simple_chair__link_0: true
+        world/cone1__Construction Cone__link: true
+        world/cone2__Construction Cone__link: true
+        world/cone3__Construction Cone__link: true
+        world/cone4__Construction Cone__link: true
+        world/cup1__plastic_cup__link: true
+        world/cup2__plastic_cup__link: true
+        world/dinning_room_table__dinning_room_table__base_link: true
+        world/human__person_standing__link: true
+        world/hydrant1__fire_hydrant__link: true
+        world/hydrant2__fire_hydrant__link: true
+        world/lamp_ikea_arstid__lamp_ikea_arstid__base_link: true
+        world/nightstand1__bedroom_nightstand__link_0: true
+        world/nightstand2__bedroom_nightstand__link_0: true
+        world/pizza_box__pizza_box__base_link: true
+        world/plant_floor_small__plant_floor_small__base_link: true
+        world/shelf__shelf__base_link: true
+        world/sofa__sofa__link_0: true
+        world/table_bedside__table_bedside__base_link: true
+        world/table_living_room__table_living_room__base_link: true
+        world/table_outside__cafe_table__link: true
+        world/tea_box__tea_box__base_link: true
+        world/tray_blue_white__tray_blue_white__base_link: true
+        world/tree1__pine_tree__link: true
+        world/tree2__pine_tree__link: true
+        world/tv__tv__link_0: true
+        world/tv_table__tv_table__link_0: true
+        world/wall__wall__Wall_0: true
+        world/wall__wall__Wall_2: true
+        world/walls__walls__Door_4: true
+        world/walls__walls__Wall_19: true
+        world/walls__walls__Wall_21: true
+        world/walls__walls__Wall_22: true
+        world/walls__walls__Wall_23: true
+        world/walls__walls__Wall_24: true
+        world/walls__walls__Wall_25: true
+        world/walls__walls__Wall_26: true
+        world/walls__walls__Wall_27: true
+        world/walls__walls__Wall_36: true
+        world/walls__walls__Wall_48: true
+        world/walls__walls__Wall_49: true
+        world/walls__walls__Wall_50: true
+        world/walls__walls__Wall_51: true
+        world/walls__walls__Wall_53: true
+        world/walls__walls__Wall_58: true
+        world/walls__walls__Wall_61: true
+        world/walls__walls__Wall_63: true
+        world/wardrobe__wardrobe__base_link: true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /semworld/viz_marker
+      Value: true
+    - Class: rviz_default_plugins/InteractiveMarkers
+      Enable Transparency: true
+      Enabled: true
+      Interactive Markers Namespace: /phase_sequence_markers
+      Name: InteractiveMarkers
+      Show Axes: false
+      Show Descriptions: true
+      Show Visual Aids: false
+      Value: true
+    - Class: rviz_default_plugins/MarkerArray
+      Enabled: true
+      Name: MarkerArray
+      Namespaces:
+        {}
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /phase_sequence_markers_bowl
+      Value: true
+    - Class: rviz_default_plugins/MarkerArray
+      Enabled: true
+      Name: MarkerArray
+      Namespaces:
+        points_sequence_1: true
+        points_sequence_2: true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /point_sequence
+      Value: true
+    - Class: rviz_default_plugins/MarkerArray
+      Enabled: true
+      Name: MarkerArray
+      Namespaces:
+        {}
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /pose_sequence
+      Value: true
+    - Class: rviz_default_plugins/MarkerArray
+      Enabled: true
+      Name: MarkerArray
+      Namespaces:
+        {}
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /pycram/wipe_targets
+      Value: true
+    - Class: rviz_default_plugins/TF
+      Enabled: false
+      Filter (blacklist): ""
+      Filter (whitelist): ""
+      Frame Timeout: 1000
+      Frames:
+        All Enabled: false
+      Marker Scale: 1
+      Name: TF
+      Show Arrows: true
+      Show Axes: true
+      Show Names: false
+      Tree:
+        {}
+      Update Interval: 0
+      Value: false
+    - Class: rviz_default_plugins/MarkerArray
+      Enabled: true
+      Name: MarkerArray
+      Namespaces:
+        {}
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /debug/costmap/final
+      Value: true
+    - Class: rviz_default_plugins/MarkerArray
+      Enabled: false
+      Name: MarkerArray
+      Namespaces:
+        {}
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /debug/costmap/occupancy
+      Value: false
+    - Class: rviz_default_plugins/MarkerArray
+      Enabled: false
+      Name: MarkerArray
+      Namespaces:
+        {}
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /debug/costmap/ring
+      Value: false
+  Enabled: true
+  Global Options:
+    Background Color: 48; 48; 48
+    Fixed Frame: map
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz_default_plugins/Interact
+      Hide Inactive Objects: true
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/Select
+    - Class: rviz_default_plugins/FocusCamera
+    - Class: rviz_default_plugins/Measure
+      Line color: 128; 128; 0
+    - Class: rviz_default_plugins/SetInitialPose
+      Covariance x: 0.25
+      Covariance y: 0.25
+      Covariance yaw: 0.06853891909122467
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /initialpose
+    - Class: rviz_default_plugins/SetGoal
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /goal_pose
+    - Class: rviz_default_plugins/PublishPoint
+      Single click: true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /clicked_point
+  Transformation:
+    Current:
+      Class: rviz_default_plugins/TF
+  Value: true
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Distance: 3.4070382118225098
+      Enable Stereo Rendering:
+        Stereo Eye Separation: 0.05999999865889549
+        Stereo Focal Distance: 1
+        Swap Stereo Eyes: false
+        Value: false
+      Focal Point:
+        X: 1.5186406373977661
+        Y: 0.44095078110694885
+        Z: 1.1656579971313477
+      Focal Shape Fixed Size: true
+      Focal Shape Size: 0.05000000074505806
+      Invert Z Axis: false
+      Name: Current View
+      Near Clip Distance: 0.009999999776482582
+      Pitch: 0.36979687213897705
+      Target Frame: <Fixed Frame>
+      Value: Orbit (rviz_default_plugins)
+      Yaw: 5.887602806091309
+    Saved: ~
+Window Geometry:
+  Displays:
+    collapsed: true
+  Height: 1403
+  Hide Left Dock: true
+  Hide Right Dock: true
+  QMainWindow State: 000000ff00000000fd00000004000000000000025f000004ddfc0200000008fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000004100fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073000000003b000004dd0000009400fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c0000026100000001000001c9000004ddfc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073000000003b000004dd0000008d00fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000005000000003efc0100000002fb0000000800540069006d00650100000000000005000000026f00fffffffb0000000800540069006d0065010000000000000450000000000000000000000500000004dd00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  Selection:
+    collapsed: false
+  Time:
+    collapsed: false
+  Tool Properties:
+    collapsed: false
+  Views:
+    collapsed: true
+  Width: 1280
+  X: 1280
+  Y: 0
