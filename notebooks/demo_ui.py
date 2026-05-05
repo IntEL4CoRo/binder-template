@@ -63,7 +63,7 @@ def _default_object_kind_for_action(action):
 
 CURRENT_DEMO_SELECTION = {}
 BACKGROUND_IMAGE_PATH = (
-    Path(__file__).resolve().parent.parent.joinpath("img", "ease-background.png")
+    Path(__file__).resolve().parent.parent.joinpath("img", "aicor-background.png")
 )
 LOGO_IMAGE_PATH = Path(__file__).resolve().parent.parent.joinpath("img", "aicor-logo.png")
 RVIZ_CONFIG_DIRECTORY = Path(__file__).resolve().parent / "rviz"
@@ -147,15 +147,10 @@ def _build_demo_subprocess_command():
     ]
 
 
-def _inject_styles(include_background=True):
+def _inject_styles():
     background_image = ""
-    if include_background and BACKGROUND_IMAGE_PATH.exists():
+    if BACKGROUND_IMAGE_PATH.exists():
         background_image = b64encode(BACKGROUND_IMAGE_PATH.read_bytes()).decode("ascii")
-    background_layer = (
-        f',\n                    url("data:image/png;base64,{background_image}")'
-        if background_image
-        else ""
-    )
 
     style_template = """
             <style>
@@ -183,12 +178,20 @@ def _inject_styles(include_background=True):
                 position: absolute;
                 inset: 0;
                 background:
-                    linear-gradient(180deg, rgba(255, 255, 255, 0.78) 0%, rgba(247, 250, 252, 0.84) 100%)__BACKGROUND_LAYER__;
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.78) 0%, rgba(247, 250, 252, 0.84) 100%);
+                background-position: center top;
+                background-repeat: no-repeat;
+                background-size: auto;
+                opacity: 0.72;
+                pointer-events: none;
+            }
+            .demo-shell.demo-has-background::before {
+                background:
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.78) 0%, rgba(247, 250, 252, 0.84) 100%),
+                    url("data:image/png;base64,__BACKGROUND_IMAGE__");
                 background-position: center top, calc(50% + 240px) -56px;
                 background-repeat: no-repeat;
                 background-size: auto, 112% auto;
-                opacity: 0.72;
-                pointer-events: none;
             }
             .demo-shell > * {
                 position: relative;
@@ -450,7 +453,7 @@ def _inject_styles(include_background=True):
             </style>
             """
 
-    display(HTML(style_template.replace("__BACKGROUND_LAYER__", background_layer)))
+    display(HTML(style_template.replace("__BACKGROUND_IMAGE__", background_image)))
 
 
 def _logo_header():
@@ -586,7 +589,7 @@ def _faq_section():
 
 
 def run_info_ui():
-    _inject_styles(include_background=False)
+    _inject_styles()
     children = [_faq_section()]
     container = widgets.VBox(children, layout=widgets.Layout(width="100%"))
     container.add_class("demo-shell")
@@ -768,6 +771,7 @@ def run_ui(on_start=None):
     children.append(controls)
     container = widgets.VBox(children, layout=widgets.Layout(width="100%"))
     container.add_class("demo-shell")
+    container.add_class("demo-has-background")
     display(container)
 
 
